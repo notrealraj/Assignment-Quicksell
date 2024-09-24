@@ -1,0 +1,106 @@
+.card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.card .ticket-id {
+    color: #6b6f76;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card .title {
+    color: #1d1f23;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card .middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.card .bottom-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.card .tag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #edeff2;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #f9fafc;
+}
+
+.card .tag-icon {
+    background-color: #bec2c8;
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+.card .tag-text {
+    color: #6b6f76;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.card .top-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .more-icon-container {
+    display: grid;
+    place-items: center;
+    border: 1px solid #edeff2;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color: #f1f3f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .more-icon-container:hover {
+    background-color: #e2e4e8;
+}
+
+.card svg {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        min-width: 100%;
+        padding: 0.75rem;
+    }
+
+    .card .middle-container,
+    .card .bottom-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

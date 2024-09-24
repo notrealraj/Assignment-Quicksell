@@ -1,0 +1,31 @@
+.grid {
+    min-height: calc(100vh - 60px); /* Adjusted to consider header height */
+    background-color: #f4f5f8;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 1.5rem; /* Reduced gap for a tighter layout */
+    padding: 2rem; /* More padding for better spacing */
+    transition: all 0.3s ease; /* Smooth transition on layout change */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Adjusted for tablets */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        padding: 1.5rem; /* Slightly less padding */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+        gap: 1rem; /* Tighter gap on small screens */
+        padding: 1rem; /* Reduced padding for better fit */
+    }
+}
